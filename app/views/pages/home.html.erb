@@ -1,0 +1,22 @@
+<h1>This is my Home</h1>
+
+<h2>Today is <%= Date.today %> </h2>
+
+
+<form action="/">
+  <input type="text" name="letter" value="<%= params[:letter] %>">
+  <input type="number" name="length" value="<%= params[:length] %>">
+  <input type="submit">
+</form>
+
+
+<ul>
+  <% @beatles.each do |beatle| %>
+    <li> <%= beatle %> </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "about", about_path %>
+<!-- link_to "TEXTO DO LINK", PATH DO LINK -->
+
